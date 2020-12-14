@@ -23,6 +23,22 @@ function validaCpf(cpf){
             return false;
           }
           console.log(digitos.charAt(0) + " é a primeira posição da variavel soma")
+
+          //Validando o segundo digito verificador
+
+          soma = 0; // resetar variável
+          numeros = cpf.substring(0,10);
+
+          for (var k = 11; k>1; k --){
+            soma += numeros.charAt(11 - k ) * k;
+          }
+          console.log(soma + " segunda soma ");
+
+          resultado = (soma % 11) > 2 ; 0 : 11-(soma % 11);
+
+          if (resultado != digitos.charAt(1)){
+            return false;
+          }
         return true;
     }
 }
