@@ -16,6 +16,13 @@ function validaCpf(cpf){
             soma += numeros.charAt(10-i)*i;
           }
           console.log(soma);
+          var resultado = (soma % 11) < 2 ? 0 : 11 - (soma % 11); //oprador ternário no lugar de if else
+
+         // Validação do primeiro digito
+          if (resultado != digitos.charAt(0)){
+            return false;
+          }
+          console.log(digitos.charAt(0) + " é a primeira posição da variavel soma")
         return true;
     }
 }
