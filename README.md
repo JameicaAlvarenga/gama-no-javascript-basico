@@ -1,2 +1,2 @@
-#Criando Validador de CPF 
+#Criando Validador de CPF.
 gama-no-javascript-basico
